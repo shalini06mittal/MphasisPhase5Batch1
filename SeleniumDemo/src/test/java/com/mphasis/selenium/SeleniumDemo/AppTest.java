@@ -1,20 +1,37 @@
 package com.mphasis.selenium.SeleniumDemo;
 
-import static org.junit.Assert.assertTrue;
+import static org.testng.Assert.assertEquals;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
-import org.junit.Test;
-
-/**
- * Unit test for simple App.
- */
 public class AppTest 
 {
-    /**
-     * Rigorous Test :-)
-     */
+    private WebDriver driver;
+    private String url;
+    private String expectedTitle;
+	
+	@BeforeEach
+	public void before()
+	{
+		//System.setProperty("webdriver.chrome.driver", "D://jars/chromedriver.exe");
+		driver = new ChromeDriver();
+		url = "http://www.google.com";
+		expectedTitle = "Google";
+		driver.navigate().to(url);
+	}	
     @Test
-    public void shouldAnswerWithTrue()
-    {
-        assertTrue( true );
+    public void shouldTitleMatch()
+    { 	
+		String actualtitle = driver.getTitle();
+		assertEquals(actualtitle, expectedTitle);
     }
+    @AfterEach
+	public  void closeBrowser()
+	{
+		// 4) close the browser
+		driver.close();
+	}
 }
