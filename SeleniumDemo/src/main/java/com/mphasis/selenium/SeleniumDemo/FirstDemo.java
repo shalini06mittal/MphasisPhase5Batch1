@@ -8,10 +8,8 @@ public class FirstDemo {
 	private static WebDriver driver;
 	public static void loadDriver()
 	{
-		//1) Load the driver
-		// mac users and mac m1 users do not specify the location
-		//  https://www.swtestacademy.com/install-chrome-driver-on-mac/
-		//System.setProperty("webdriver.chrome.driver", "/Users/Shalini/Desktop/jars/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "/Users/Shalini/Desktop/jars/chromedriver");
+		
 		// windows user
 		//System.setProperty("webdriver.chrome.driver", "D://jars/chromedriver.exe");
 
