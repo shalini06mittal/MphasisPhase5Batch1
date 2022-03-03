@@ -24,6 +24,7 @@ public class TestLocatorByLinkText {
 		driver.navigate().to(url);
 		driver.manage().window().maximize();
 	}
+	//done?
 	@AfterMethod
 	public void afterMethod() {
 		driver.close();
