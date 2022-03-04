@@ -18,7 +18,9 @@ public class TestWaitTimeOuts
 {
 	private WebDriver driver;
 	private String url;
-
+	
+	// screenshots and advance actions 
+	// testng
 
 		@BeforeEach
 		public void before()
