@@ -55,26 +55,30 @@ public class TestAdvanceUserInteractionsClick
 					.pause(Duration.ofSeconds(2))
 					.contextClick()
 					.pause(Duration.ofSeconds(2))
+					
 					.build();
 			
 			
 			seriesOfActions.perform();
 			
-			driver.findElement(By.linkText("Copy")).click();
-			
-			Thread.sleep(1000);
-			WebElement ele1 = driver.findElement(By.id("email"));
-			builder.moveToElement(ele1)
-			.click()
-			.pause(Duration.ofSeconds(2))
-			.keyDown(ele, Keys.CONTROL)
-			.sendKeys("V")
-			.pause(Duration.ofSeconds(2))
-			.keyUp(ele, Keys.CONTROL)
-			
-			.pause(Duration.ofSeconds(2))
-			.build().perform();
-	
+			builder.sendKeys(Keys.DOWN).build().perform();
+			builder.sendKeys(Keys.DOWN).build().perform();
+			builder.sendKeys(Keys.ENTER).build().perform();
+//			driver.findElement(By.linkText("Copy")).click();
+//			
+//			Thread.sleep(1000);
+//			WebElement ele1 = driver.findElement(By.id("email"));
+//			builder.moveToElement(ele1)
+//			.click()
+//			.pause(Duration.ofSeconds(2))
+//			.keyDown(ele, Keys.CONTROL)
+//			.sendKeys("V")
+//			.pause(Duration.ofSeconds(2))
+//			.keyUp(ele, Keys.CONTROL)
+//			
+//			.pause(Duration.ofSeconds(2))
+//			.build().perform();
+//	
 			
 			Thread.sleep(2000);
 	    }
